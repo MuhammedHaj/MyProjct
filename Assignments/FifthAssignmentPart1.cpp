@@ -3,29 +3,16 @@
 using namespace std;
 int main()
 {
-	int x,list[50]={0,1},i=2;
+	int x,list[50]={0,1};
 	cin>>x;
-	if (x==0)
+	if(x>2)
 	{
-		cout<<list[0];
-	}
-	else if(x==1)
+	for(int i=2;i<x;i++)
 	{
-		cout<<list[0]<<"\n"<<list[1];
-	}
-	else
-	{
-		y:
 		list[i]=list[i-1]+list[i-2];
-		if (x==list[i])
-		{
-			for(int j=0;j<=i;j++)
-			cout<<list[j]<<endl;
-			
-		}
-		else
-		{ i++;
-		goto y;}
+	}}
+	for(int i=0;i<x;i++)
+	{
+		cout<<list[i]<<endl;
 	}
-	
 	}
