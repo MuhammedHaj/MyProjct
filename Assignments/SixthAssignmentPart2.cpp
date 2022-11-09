@@ -1,19 +1,21 @@
 #include<iostream>
 using namespace std;
-void Reverse(int *arr,int count)
+void Reverse(int arr[],int count)
 {
+    int list[count];
     for(int i=count-1;i>=0;i--)
     {
-        int temp;
-        int j=0;
-        temp=*(arr+j);
-        *(arr+j)=*(arr+i);
-        *(arr+i)=temp;
+        static int j=0;
+        list[j]=arr[i];
         j++;
     }
     for(int i=0 ;i<count;i++)
     {
-        cout<<*(arr+i)<<endl;
+        arr[i]=list[i];
+    }
+    for(int i=0 ;i<count;i++)
+    {
+        cout<<list[i]<<endl;
     }
 }
 int main()
