@@ -4,6 +4,15 @@ void Reverse(int *arr,int count)
 {
     for(int i=count-1;i>=0;i--)
     {
+        int temp;
+        int j=0;
+        temp=*(arr+j);
+        *(arr+j)=*(arr+i);
+        *(arr+i)=temp;
+        j++;
+    }
+    for(int i=0 ;i<count;i++)
+    {
         cout<<*(arr+i)<<endl;
     }
 }
