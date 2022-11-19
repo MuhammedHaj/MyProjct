@@ -1,14 +1,12 @@
 #include <stdio.h>
-
+#include<iostream>
 void update(int *a,int *b) {
-    // Complete this function
-    int s,d;
-    s=*a+*b;
-    d=*a-*b;
-    if(d<0)
-    {d=-d;}
-    *a=s;
-    *b=d;    
+    // Complete this function    
+  int x,y;
+  x=*a+*b;
+  y=abs(*a-*b);
+  *a=x;
+  *b=y;
 }
 
 int main() {
